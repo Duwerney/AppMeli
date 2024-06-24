@@ -215,7 +215,6 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate   {
                 imageView.contentMode = .scaleAspectFit
                 imageView.translatesAutoresizingMaskIntoConstraints = false
                 
-                // Load image asynchronously
                 DispatchQueue.global().async {
                     if let imageData = try? Data(contentsOf: imageUrl) {
                         DispatchQueue.main.async {
@@ -226,11 +225,8 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate   {
                 
                 // Extract size
                 let (width, height) = extractSize(from: picture.size)
-                
-                // Add imageView to horizontal stackView
                 stackView.addArrangedSubview(imageView)
                 
-                // Add constraints for size based on extracted size
                 if let width = width, let height = height {
                     NSLayoutConstraint.activate([
                         imageView.widthAnchor.constraint(equalToConstant: CGFloat(width)),

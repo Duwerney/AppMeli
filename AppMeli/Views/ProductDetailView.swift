@@ -29,11 +29,11 @@ class ProductDetailView: UIView {
         addSubview(priceLabel)
         addSubview(imageView)
 
-        // Configura los elementos de UI (puedes agregar más configuraciones según necesites)
+        // Configura los elementos de UI 
         idLabel.numberOfLines = 0
         titleLabel.numberOfLines = 0
         priceLabel.numberOfLines = 0
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
 
         // Configura el layout de los elementos de UI
         idLabel.translatesAutoresizingMaskIntoConstraints = false

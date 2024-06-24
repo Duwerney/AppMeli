@@ -11,12 +11,11 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.systemYellow
-        // Aquí puedes agregar una imagen o animación
         navigateToSearch()
     }
 
     private func navigateToSearch() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // 2 segundos de splash
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             let searchVC = SearchViewController()
             let navigationController = UINavigationController(rootViewController: searchVC)
             navigationController.modalTransitionStyle = .crossDissolve

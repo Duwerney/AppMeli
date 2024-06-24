@@ -52,7 +52,6 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
             case .success:
                 self?.tableView.reloadData()
             case .failure(let error):
-                // Manejo de errores
                 print(error.localizedDescription)
             }
         }
